@@ -1,0 +1,11 @@
+file_format: "1"
+id: engikeeb
+name: engikeeb
+type: shield
+url: https://custommk.com
+requires: [pro_micro]
+exposes: [i2c_oled]
+features:
+  - keys
+  - display
+  - encoder
