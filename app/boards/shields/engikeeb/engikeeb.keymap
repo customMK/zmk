@@ -18,6 +18,7 @@
 / {
     combos {
         compatible = "zmk,combos";
+        /*
         combo_btclr {
             timeout-ms = <TIMEOUT>;
             key-positions = <0 3>;
@@ -38,6 +39,7 @@
             key-positions = <0 4>;
             bindings = <&bt BT_NXT>;
         };
+        */
         combo_mute {
             timeout-ms = <TIMEOUT>;
             key-positions = <0 5>;

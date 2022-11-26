@@ -13,7 +13,7 @@
 		compatible = "zmk,gpio-595";
 		status = "okay";
 		gpio-controller;
-		spi-max-frequency = <200000>;
+		spi-max-frequency = <10000>;
 		reg = <0>;
 		label = "4HC595";
 		#gpio-cells = <2>;
@@ -34,45 +34,45 @@
 		compatible = "zmk,kscan-gpio-matrix";
 		label = "KSCAN";
 
-		diode-direction = "row2col";
+		diode-direction = "col2row";
 		row-gpios
-			= <&pro_micro 21  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-			, <&pro_micro 20  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-			, <&pro_micro 19  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-			, <&pro_micro 18  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-            , <&pro_micro 5   (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-            , <&pro_micro 6   (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+			= <&pro_micro 21  (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+			, <&pro_micro 20  (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+			, <&pro_micro 19  (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+			, <&pro_micro 18  (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+            , <&pro_micro 5   (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+            , <&pro_micro 6   (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
             ;
 		col-gpios
-			= <&shifter 0  GPIO_ACTIVE_HIGH>
-			, <&shifter 1  GPIO_ACTIVE_HIGH>
-			, <&shifter 2  GPIO_ACTIVE_HIGH>
-			, <&shifter 3  GPIO_ACTIVE_HIGH>
-            , <&shifter 4  GPIO_ACTIVE_HIGH>
-			, <&shifter 5  GPIO_ACTIVE_HIGH>
-			, <&shifter 6  GPIO_ACTIVE_HIGH>
-			, <&shifter 7  GPIO_ACTIVE_HIGH>
-            , <&shifter 8  GPIO_ACTIVE_HIGH>
-			, <&shifter 9  GPIO_ACTIVE_HIGH>
-            , <&shifter 10 GPIO_ACTIVE_HIGH>
-		    , <&shifter 11 GPIO_ACTIVE_HIGH>
-			, <&shifter 12 GPIO_ACTIVE_HIGH>
-			, <&shifter 13 GPIO_ACTIVE_HIGH>
-            , <&shifter 14 GPIO_ACTIVE_HIGH>
-			, <&shifter 15 GPIO_ACTIVE_HIGH>
-			, <&shifter 16 GPIO_ACTIVE_HIGH>
-			, <&shifter 17 GPIO_ACTIVE_HIGH>
-            , <&shifter 18 GPIO_ACTIVE_HIGH>
-			, <&shifter 19 GPIO_ACTIVE_HIGH>
-            , <&shifter 20 GPIO_ACTIVE_HIGH>
+			= <&shifter 0  GPIO_ACTIVE_LOW>
+			, <&shifter 1  GPIO_ACTIVE_LOW>
+			, <&shifter 2  GPIO_ACTIVE_LOW>
+			, <&shifter 3  GPIO_ACTIVE_LOW>
+            , <&shifter 4  GPIO_ACTIVE_LOW>
+			, <&shifter 5  GPIO_ACTIVE_LOW>
+			, <&shifter 6  GPIO_ACTIVE_LOW>
+			, <&shifter 7  GPIO_ACTIVE_LOW>
+            , <&shifter 8  GPIO_ACTIVE_LOW>
+			, <&shifter 9  GPIO_ACTIVE_LOW>
+            , <&shifter 10 GPIO_ACTIVE_LOW>
+		    , <&shifter 11 GPIO_ACTIVE_LOW>
+			, <&shifter 12 GPIO_ACTIVE_LOW>
+			, <&shifter 13 GPIO_ACTIVE_LOW>
+            , <&shifter 14 GPIO_ACTIVE_LOW>
+			, <&shifter 15 GPIO_ACTIVE_LOW>
+			, <&shifter 16 GPIO_ACTIVE_LOW>
+			, <&shifter 17 GPIO_ACTIVE_LOW>
+            , <&shifter 18 GPIO_ACTIVE_LOW>
+			, <&shifter 19 GPIO_ACTIVE_LOW>
+            , <&shifter 20 GPIO_ACTIVE_LOW>
 			;
 	};
 
 	encoder_1: encoder_1 {
 		compatible = "alps,ec11";
 		label = "Encoder 1";
-		a-gpios = <&pro_micro 7 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
-		b-gpios = <&pro_micro 8 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+		a-gpios = <&pro_micro 7 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+		b-gpios = <&pro_micro 8 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
 		resolution = <2>;
 		status = "disabled";
 	};
