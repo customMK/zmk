@@ -1,0 +1,13 @@
+/*
+ * Copyright (c) 2021 The ZMK Contributors
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+&spi0 {
+	compatible = "nordic,nrf-spim";
+	mosi-pin = <(32*0+10)>;
+	sck-pin = <(32*1+13)>;
+	// Unused pin, needed for SPI definition, but not used by the shift register driver itself.
+	miso-pin = <(32*1+11)>;
+};

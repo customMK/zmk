@@ -18,7 +18,6 @@
 / {
     combos {
         compatible = "zmk,combos";
-        /*
         combo_btclr {
             timeout-ms = <TIMEOUT>;
             key-positions = <0 3>;
@@ -39,11 +38,35 @@
             key-positions = <0 4>;
             bindings = <&bt BT_NXT>;
         };
-        */
         combo_mute {
             timeout-ms = <TIMEOUT>;
             key-positions = <0 5>;
             bindings = <&kp C_MUTE>;
+        };
+        combo_bt1 {
+            timeout-ms = <TIMEOUT>;
+            key-positions = <0 6>;
+            bindings = <&bt BT_SEL 0>;
+        };
+        combo_bt2 {
+            timeout-ms = <TIMEOUT>;
+            key-positions = <0 7>;
+            bindings = <&bt BT_SEL 1>;
+        };
+        combo_bt3 {
+            timeout-ms = <TIMEOUT>;
+            key-positions = <0 8>;
+            bindings = <&bt BT_SEL 2>;
+        };
+        combo_bt4 {
+            timeout-ms = <TIMEOUT>;
+            key-positions = <0 9>;
+            bindings = <&bt BT_SEL 3>;
+        };
+        combo_bt5 {
+            timeout-ms = <TIMEOUT>;
+            key-positions = <0 10>;
+            bindings = <&bt BT_SEL 4>;
         };
     };
     
@@ -66,7 +89,7 @@
                 &kp LSHIFT  &trans    &kp Z   &kp X     &kp C   &kp V   &kp B      &kp N   &kp M   &kp COMMA  &kp DOT   &kp SLASH  &kp RSHIFT  &kp RSHIFT    &trans     &kp UP    &trans             &kp KP_N1   &kp KP_N2     &kp KP_N3        &kp KP_ENTER 
                 &kp LCTRL   &kp LGUI  &trans  &kp LALT  &trans  &trans  &kp SPACE  &trans  &trans  &kp RALT   &kp RGUI  &trans     &kp K_APP   &kp RCTRL     &kp LEFT   &kp DOWN  &kp RIGHT          &trans      &kp KP_N0     &kp KP_DOT       &trans    
             >;
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
 
         }; 
         
